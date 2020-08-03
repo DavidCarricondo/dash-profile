@@ -22,76 +22,48 @@ card_content_1 = [
 ]
 
 
-navbar = dbc.Navbar(
-    [
-        html.A(
-            # Use row and col to control vertical alignment of logo / brand
-            dbc.Row(
-                [
-                    html.Div(id="banner-text",children=[
-                                                        html.H2("David Carricondo Sánchez"),
-                                                        html.H3("My Profile"),
-                                                        ])
-                ],
-                align="center",
-                no_gutters=False,
-            ),
-        ),
-        dbc.Nav(dbc.Row([
-                    dbc.Col(dbc.NavLink('My Linkedin', href='https://www.linkedin.com/in/david-carricondo-sanchez/')),
-                    dbc.Col(dbc.NavLink('My Github', href='https://github.com/DavidCarricondo')),
-        ]))
+navbar = dbc.NavbarSimple(
+    children=[
+        dbc.NavLink('My Linkedin', href='https://www.linkedin.com/in/david-carricondo-sanchez/', className='lead'),
+        dbc.NavLink('My Github', href='https://github.com/DavidCarricondo', className='lead'),
+            
     ],
+    brand="You can know more about me here: ",
+    brand_href="#",
     color="dark",
-    dark=True
-    )
+    dark=True,
+)
 
-'''
-navbar=html.Div(
-        id="banner",
-        className="banner",
-        children=[
-            html.Div(
-                id="banner-text",
-                children=[
-                    html.H2("David Carricondo Sánchez"),
-                    html.H3("My Profile"),
-                ],
-            ),
-            html.Div(
-                id="banner-logo",
-                children=[
-                    html.Button(
-                        id="learn-more-button", children="LEARN MORE", n_clicks=0
-                    ),
-                    html.Img(id="logo", src=app.get_asset_url("dash-logo-new.png")),
-                ],
-            ),
-        ],
-    )
-'''
+
+#footer = html.Footer([html.A(html.Img(src="linkedin_image.png", style={'height':'50%', 'width':'50%', 'text-align':'right'}), href='https://www.linkedin.com/in/david-carricondo-sanchez/'),
+#                    html.A(html.Img(src='github_image.png' ,style={'height':'50%', 'width':'50%', 'text-align':'right'}), href='https://github.com/DavidCarricondo')])
+
 card = [
     dbc.Row([
         dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem"})),
-        dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem"})),
-        dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem"})),
-        dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem"})),
+        dbc.Col(dbc.Card(card_content_1, color="success", inverse=True, style={"width": "24rem"})),
+        dbc.Col(dbc.Card(card_content_1, color="danger", inverse=True, style={"width": "24rem"})),
+        dbc.Col(dbc.Card(card_content_1, color="warning", inverse=True, style={"width": "24rem"})),
     ]),
     html.Hr(),
     dbc.Row([
-        dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem"})),
-        dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem"})),
-        dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem"})),
+        dbc.Col(dbc.Card(card_content_1, color="info", inverse=True, style={"width": "24rem"})),
+        dbc.Col(dbc.Card(card_content_1, color="light", inverse=True, style={"width": "24rem"})),
+        dbc.Col(dbc.Card(card_content_1, color="dark", inverse=True, style={"width": "24rem"})),
         dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem"})),
     ])
     ]
 
 app.layout = html.Div(children=
                 [   
+                    html.Div(html.H1("Welcome to David Carricondo's profile"), style={'color':'dark'}),
                     html.Div(navbar),
                     html.Div(card)
                 ]
             )
+
+app.title = "David Carricondo's profile"
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
