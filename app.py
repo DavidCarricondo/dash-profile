@@ -1,26 +1,10 @@
 import dash
 import dash_bootstrap_components as dbc
 import dash_html_components as html
-from layout import *
+from src.layout import *
 from dash.dependencies import Input, Output, State
+from src.app_dash import app, external_stylesheets, server
 
-external_stylesheets = [dbc.themes.DARKLY]
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-server = app.server
-
-card_content_1 = [
-    dbc.CardImg(src=app.get_asset_url ('drawme.png'), top=True),
-    dbc.CardBody(
-        [
-            html.H4(dcc.Markdown("**Draw-me!**"), className="card-title"),
-            html.P(
-                "Desktop app that uses a custom CNN to classify drawings in a 'paint-like' interface. The app then substitute these drawings for the face features detected in a live web cam streaming via haar-cascades.",
-                className="card-text",
-            ),
-            html.A(html.Button("Let's take a look!"), href='https://www.github.com/DavidCarricondo/Draw-me'),
-        ]
-    ),
-]
 
 #footer = html.Footer([html.A(html.Img(src="linkedin_image.png", style={'height':'50%', 'width':'50%', 'text-align':'right'}), href='https://www.linkedin.com/in/david-carricondo-sanchez/'),
 #                    html.A(html.Img(src='github_image.png' ,style={'height':'50%', 'width':'50%', 'text-align':'right'}), href='https://github.com/DavidCarricondo')])

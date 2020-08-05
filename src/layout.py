@@ -1,12 +1,24 @@
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
+from src.app_dash import app
 
-
-
+card_content_1 = [
+    dbc.CardImg(src=app.get_asset_url('drawme.png'), top=True, style={'height':'14rem'}),
+    dbc.CardBody(
+        [
+            html.H4(dcc.Markdown("**Draw-me!**"), className="card-title"),
+            html.P(
+                "Desktop app that uses a custom CNN to classify drawings in a 'paint-like' interface. The app then substitute these drawings for the face features detected in a live web cam streaming via haar-cascades.",
+                className="card-text",
+            ),
+            html.A(html.Button("Let's take a look!"), href='https://www.github.com/DavidCarricondo/Draw-me'),
+        ]
+    ),
+]
 
 card_content_2 = [
-    dbc.CardImg(src="https://media.giphy.com/media/9DavVitIZ26jH0aK7s/giphy.gif", top=True),
+    dbc.CardImg(src=app.get_asset_url('Dashboard_demo.gif'), top=True, style={'height':'14rem'}),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**Book reviews analyzer**"), className="card-title"),
