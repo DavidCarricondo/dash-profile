@@ -19,17 +19,17 @@ card = [
         dbc.Col(text_card,  style={"width": "28rem"}),
         dbc.Col()]),
     dbc.Row([
-        dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_2, color="#5A6560", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_3, color="#3A413E", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_4, color="primary", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_1, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_2, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_3, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_4, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
     ]),
     html.Hr(),
     dbc.Row([
-        dbc.Col(dbc.Card(card_content_5, color="primary", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_6, color="#5A6560", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_7, color="#3A413E", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_8, color="primary", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_5, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_6, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_7, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_8, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
     ])
     ]
 
