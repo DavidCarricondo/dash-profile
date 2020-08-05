@@ -125,8 +125,8 @@ card_content_8 = [
 
 navbar = dbc.NavbarSimple(
     children=[
-        dbc.NavLink('My Linkedin', href='https://www.linkedin.com/in/david-carricondo-sanchez/', className='lead'),
-        dbc.NavLink('My Github', href='https://github.com/DavidCarricondo', className='lead'),
+        dbc.NavLink(html.Img(src='https://img.favpng.com/3/0/16/social-media-computer-icons-linkedin-logo-png-favpng-dz7dbtYLecDEbedD2St1ztcXU.jpg', style={'height':'95%', 'width':'25%', 'text-align':'right'}), href='https://www.linkedin.com/in/david-carricondo-sanchez/', className='lead'),
+        dbc.NavLink(html.Img(src='https://img.favpng.com/1/12/25/github-bitbucket-fork-software-repository-png-favpng-TEbehRM0NEbBUTpb9JebFRUmL.jpg',style={'height':'95%', 'width':'25%'}), href='https://github.com/DavidCarricondo', className='lead'),
             
     ],
     brand="You can know more about me here: ",
