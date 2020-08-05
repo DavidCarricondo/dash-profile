@@ -15,23 +15,27 @@ server = app.server
 
 card = [
     dbc.Row([
+        dbc.Col(),
+        dbc.Col(text_card,  style={"width": "28rem"}),
+        dbc.Col()]),
+    dbc.Row([
         dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_2, color="success", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_3, color="danger", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_4, color="warning", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_2, color="#5A6560", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_3, color="#3A413E", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_4, color="primary", inverse=True, style={"width": "24rem", "height" : "28rem"})),
     ]),
     html.Hr(),
     dbc.Row([
-        dbc.Col(dbc.Card(card_content_1, color="info", inverse=True, style={"width": "24rem"})),
-        dbc.Col(dbc.Card(card_content_1, color="light", inverse=True, style={"width": "24rem"})),
-        dbc.Col(dbc.Card(card_content_1, color="dark", inverse=True, style={"width": "24rem"})),
-        dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem"})),
+        dbc.Col(dbc.Card(card_content_5, color="primary", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_6, color="#5A6560", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_7, color="#3A413E", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_8, color="primary", inverse=True, style={"width": "24rem", "height" : "28rem"})),
     ])
     ]
 
 app.layout = html.Div(children=
                 [   
-                    html.Div(html.H1("Welcome to David Carricondo's profile"), style={'color':'dark'}),
+                    html.Div(html.H1(dcc.Markdown("**Welcome to David Carricondo's profile**"), style={"text-align":"center", "background-color":'#000000'})),
                     html.Div(card),
                     html.Hr(),
                     html.Div(navbar)
