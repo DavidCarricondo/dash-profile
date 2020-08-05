@@ -3,19 +3,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 
 
-card_content_1 = [
-    dbc.CardImg(src="https://media.giphy.com/media/9DavVitIZ26jH0aK7s/giphy.gif", top=True),
-    dbc.CardBody(
-        [
-            html.H4(dcc.Markdown("**Draw-me!**"), className="card-title"),
-            html.P(
-                "Desktop app that uses a custom CNN to classify drawings in a 'paint-like' interface. The app then substitute these drawings for the face features detected in a live web cam streaming via haar-cascades.",
-                className="card-text",
-            ),
-            html.A(html.Button("Let's take a look!"), href='https://www.github.com/DavidCarricondo/Draw-me'),
-        ]
-    ),
-]
+
 
 card_content_2 = [
     dbc.CardImg(src="https://media.giphy.com/media/9DavVitIZ26jH0aK7s/giphy.gif", top=True),
