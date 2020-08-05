@@ -7,16 +7,30 @@ card_content_1 = [
     dbc.CardImg(src="https://media.giphy.com/media/9DavVitIZ26jH0aK7s/giphy.gif", top=True),
     dbc.CardBody(
         [
-            html.H5("Card with image", className="card-title"),
+            html.H5("Draw-me!", className="card-title"),
             html.P(
-                "This card has an image on top, and a button below",
+                "Desktop app that uses a custom CNN to classify drawings in a 'paint-like' interface. The app then substitute these drawings for the face features detected in a live web cam streaming via haar-cascades",
                 className="card-text",
             ),
-            html.A(html.Button("Let's go!"), href='https://www.github.com/DavidCarricondo'),
+            html.A(html.Button("Let's take a look!"), href='https://www.github.com/DavidCarricondo/Draw-me'),
         ]
     ),
 ]
 
+card_content_2 = [
+    dbc.CardImg(src="https://media.giphy.com/media/9DavVitIZ26jH0aK7s/giphy.gif", top=True),
+    dbc.CardBody(
+        [
+            html.H5("Book reviews analyzer", className="card-title"),
+            html.P(
+                "Dashboard written with Dash that uses Selenium to scrape the latest reviews of a book and analyzes their sentiment content using a custom recursive neural network",
+                className="card-text",
+            ),
+            html.Hr(),
+            html.A(html.Button("Let's take a look!"), href='https://github.com/DavidCarricondo/selenium-NLP'),
+        ]
+    ),
+]
 
 navbar = dbc.NavbarSimple(
     children=[

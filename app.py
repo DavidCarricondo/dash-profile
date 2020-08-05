@@ -15,8 +15,8 @@ server = app.server
 
 card = [
     dbc.Row([
-        dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem"})),
-        dbc.Col(dbc.Card(card_content_1, color="success", inverse=True, style={"width": "24rem"})),
+        dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_2, color="success", inverse=True, style={"width": "24rem", "height" : "28rem"})),
         dbc.Col(dbc.Card(card_content_1, color="danger", inverse=True, style={"width": "24rem"})),
         dbc.Col(dbc.Card(card_content_1, color="warning", inverse=True, style={"width": "24rem"})),
     ]),
@@ -38,7 +38,7 @@ app.layout = html.Div(children=
                 ]
             )
 
-app.title = "David Carricondo's profile"
+app.title = "David Carricondo's data projects"
 
 
 if __name__ == '__main__':
