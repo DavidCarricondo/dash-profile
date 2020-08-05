@@ -17,8 +17,8 @@ card = [
     dbc.Row([
         dbc.Col(dbc.Card(card_content_1, color="primary", inverse=True, style={"width": "24rem", "height" : "28rem"})),
         dbc.Col(dbc.Card(card_content_2, color="success", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_1, color="danger", inverse=True, style={"width": "24rem"})),
-        dbc.Col(dbc.Card(card_content_1, color="warning", inverse=True, style={"width": "24rem"})),
+        dbc.Col(dbc.Card(card_content_3, color="danger", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_4, color="warning", inverse=True, style={"width": "24rem", "height" : "28rem"})),
     ]),
     html.Hr(),
     dbc.Row([
