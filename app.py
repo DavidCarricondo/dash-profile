@@ -9,6 +9,8 @@ from src.app_dash import app, external_stylesheets, server
 #footer = html.Footer([html.A(html.Img(src="linkedin_image.png", style={'height':'50%', 'width':'50%', 'text-align':'right'}), href='https://www.linkedin.com/in/david-carricondo-sanchez/'),
 #                    html.A(html.Img(src='github_image.png' ,style={'height':'50%', 'width':'50%', 'text-align':'right'}), href='https://github.com/DavidCarricondo')])
 
+### Use lg, md, xs dbc.Col arguments to make it responsive to other screens like cellphones.
+# check: https://medium.com/swlh/dashboards-in-python-for-beginners-using-dash-responsive-mobile-dashboards-with-bootstrap-css-2a0d05a53cf6
 card = [
     dbc.Row([
         dbc.Col(),
