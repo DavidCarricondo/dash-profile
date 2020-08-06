@@ -91,7 +91,7 @@ card_content_6 = [
 ]
 
 card_content_7 = [
-    dbc.CardImg(src="https://media.giphy.com/media/9DavVitIZ26jH0aK7s/giphy.gif", top=True),
+    dbc.CardImg(src=app.get_asset_url('mongo_image.png'), top=True),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**Choosing best location for company**"), className="card-title"),
@@ -125,8 +125,8 @@ card_content_8 = [
 
 navbar = dbc.NavbarSimple(
     children=[
-        dbc.NavLink(html.Img(src='https://img.favpng.com/3/0/16/social-media-computer-icons-linkedin-logo-png-favpng-dz7dbtYLecDEbedD2St1ztcXU.jpg', style={'height':'95%', 'width':'25%', 'text-align':'right'}), href='https://www.linkedin.com/in/david-carricondo-sanchez/', className='lead'),
-        dbc.NavLink(html.Img(src='https://img.favpng.com/1/12/25/github-bitbucket-fork-software-repository-png-favpng-TEbehRM0NEbBUTpb9JebFRUmL.jpg',style={'height':'95%', 'width':'25%'}), href='https://github.com/DavidCarricondo', className='lead'),
+        dbc.NavLink(html.Img(src=app.get_asset_url('linkedin_image.png'), style={'height':'95%', 'width':'25%', 'text-align':'right'}), href='https://www.linkedin.com/in/david-carricondo-sanchez/', className='lead'),
+        dbc.NavLink(html.Img(src=app.get_asset_url('github_image.png'),style={'height':'95%', 'width':'25%'}), href='https://github.com/DavidCarricondo', className='lead'),
             
     ],
     brand="You can know more about me here: ",
@@ -138,4 +138,3 @@ navbar = dbc.NavbarSimple(
 text_card = html.Div([html.H4('Take a look at my data science projects', className='card-header', style={'color': 'primary', 'text-align': 'center'}), 
     html.Div('Thanks for visiting my profile! These are some quick descriptions of the most relevant data project I have been working on. Click on the button in each card to be redirected to the github page \
         of each of the projects. If you want to know more about me, click on the links in the footer. Enjoy your stay!', className='card-text')], className="card border-success mb-3")
-        
