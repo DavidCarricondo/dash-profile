@@ -12,7 +12,15 @@ card_content_1 = [
                 "Desktop app that uses a custom CNN to classify drawings in a 'paint-like' interface. The app then substitute these drawings for the face features detected in a live web cam streaming via haar-cascades.",
                 className="card-text",
             ),
-            html.A(html.Button("Let's take a look!"), href='https://www.github.com/DavidCarricondo/Draw-me'),
+            dbc.Row([
+                dbc.Col(html.A(html.Button("Let's take a look!", style={'color':'dark', 'hight':'1.5rem'}), href='https://www.github.com/DavidCarricondo/Draw-me'),),
+                dbc.Col([
+                    dbc.Button('Technologies', id='popover-target1', style={'color':'primary', 'height':'2rem', 'vertical-align':'top'}),
+                    dbc.Popover([
+                        dbc.PopoverBody('pim, pam, pum')
+                    ],id='popover1', is_open=False, target='popover-target1')
+                ])
+            ])
         ]
     ),
 ]
@@ -33,7 +41,7 @@ card_content_2 = [
 ]
 
 card_content_3 = [
-    dbc.CardImg(src="https://media.giphy.com/media/9DavVitIZ26jH0aK7s/giphy.gif", top=True),
+    dbc.CardImg(src=app.get_asset_url('recommender_gif.gif'), top=True),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**API-chat-recommender!**"), className="card-title"),
@@ -47,7 +55,7 @@ card_content_3 = [
 ]
 
 card_content_4 = [
-    dbc.CardImg(src="https://media.giphy.com/media/9DavVitIZ26jH0aK7s/giphy.gif", top=True),
+    dbc.CardImg(src=app.get_asset_url('gr_database_image.png'), top=True),
     dbc.CardBody(
         [
             html.H5(dcc.Markdown("**Goodreads reviews custom database**"), className="card-title"),
@@ -62,7 +70,7 @@ card_content_4 = [
 
 
 card_content_5 = [
-    dbc.CardImg(src="https://media.giphy.com/media/9DavVitIZ26jH0aK7s/giphy.gif", top=True),
+    dbc.CardImg(src=app.get_asset_url('pipeline_image.png'), top=True, style={'height':'13rem'}),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**Pipeline-project: Dancing to your band**"), className="card-title"),
@@ -76,7 +84,7 @@ card_content_5 = [
 ]
 
 card_content_6 = [
-    dbc.CardImg(src="https://media.giphy.com/media/9DavVitIZ26jH0aK7s/giphy.gif", top=True),
+    dbc.CardImg(src=app.get_asset_url('diamonds_image.png'), top=True, style={'height':'13rem'}),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**Diamond prices prediction with ML**"), className="card-title"),
@@ -91,7 +99,7 @@ card_content_6 = [
 ]
 
 card_content_7 = [
-    dbc.CardImg(src=app.get_asset_url('mongo_image.png'), top=True),
+    dbc.CardImg(src=app.get_asset_url('mongo_image.png'), top=True, style={'height':'13rem'}),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**Choosing best location for company**"), className="card-title"),
@@ -106,7 +114,7 @@ card_content_7 = [
 ]
 
 card_content_8 = [
-    dbc.CardImg(src="https://media.giphy.com/media/9DavVitIZ26jH0aK7s/giphy.gif", top=True),
+    dbc.CardImg(src=app.get_asset_url('profile_image.png'), top=True, style={'height':'13rem'}),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**My profile dashboard**"), className="card-title"),
@@ -118,7 +126,7 @@ card_content_8 = [
             html.Hr(),
             html.Hr(),
             html.Hr(),
-            html.A(html.Button("Let's take a look!"), href='https://github.com/DavidCarricondo/Custom-database-goodreads-reviews'),
+            html.A(html.Button("Let's take a look!"), href='https://github.com/DavidCarricondo/dash-profile'),
         ]
     ),
 ]
