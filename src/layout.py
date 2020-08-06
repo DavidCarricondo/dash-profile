@@ -13,11 +13,19 @@ card_content_1 = [
                 className="card-text",
             ),
             dbc.Row([
-                dbc.Col(html.A(html.Button("Let's take a look!", style={'color':'dark', 'hight':'1.5rem'}), href='https://www.github.com/DavidCarricondo/Draw-me'),),
+                dbc.Col(html.A(html.Button("Take a look!", style={'color':'dark', 'hight':'1.5rem'}), href='https://www.github.com/DavidCarricondo/Draw-me'),),
                 dbc.Col([
                     dbc.Button('Technologies', id='popover-target1', style={'color':'primary', 'height':'2rem', 'vertical-align':'top'}),
                     dbc.Popover([
-                        dbc.PopoverBody('pim, pam, pum')
+                        dbc.PopoverBody(dcc.Markdown(
+                            '''
+                            + Tensorflow 
+                            + Keras 
+                            + OpenCv
+                            + Tkinter
+                            + Neural networks
+                            + Haar cascades
+                            '''))
                     ],id='popover1', is_open=False, target='popover-target1')
                 ])
             ])
@@ -35,13 +43,29 @@ card_content_2 = [
                 className="card-text",
             ),
             html.Hr(),
-            html.A(html.Button("Let's take a look!"), href='https://github.com/DavidCarricondo/selenium-NLP'),
+            dbc.Row([
+                dbc.Col(html.A(html.Button("Take a look!", style={'color':'dark', 'hight':'1.5rem'}), href='https://github.com/DavidCarricondo/selenium-NLP'),),
+                dbc.Col([
+                    dbc.Button('Technologies', id='popover-target2', style={'color':'primary', 'height':'2rem', 'vertical-align':'top'}),
+                    dbc.Popover([
+                        dbc.PopoverBody(dcc.Markdown(
+                            '''
+                            + Dash 
+                            + Selenium 
+                            + Tensorflow
+                            + NLP
+                            + Neural networks
+                            + Plotly
+                            '''))
+                    ],id='popover2', is_open=False, target='popover-target2')
+                ])
+            ])
         ]
     ),
 ]
 
 card_content_3 = [
-    dbc.CardImg(src=app.get_asset_url('recommender_gif.gif'), top=True),
+    dbc.CardImg(src=app.get_asset_url('recommender_gif.gif'), top=True, style={'height':'14rem'}),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**API-chat-recommender!**"), className="card-title"),
@@ -49,13 +73,29 @@ card_content_3 = [
                 "This is an API for data extraction, user recommendation, and sentiment analysis of a chat. The API is deployed as a docker container in a Heroku server using a MongoDB Atlas database in the cloud.",
                 className="card-text",
             ),
-            html.A(html.Button("Let's take a look!"), href='https://github.com/DavidCarricondo/SW_chat-Sentiment-recommender'),
+            dbc.Row([
+                dbc.Col(html.A(html.Button("Take a look!", style={'color':'dark', 'hight':'1.5rem'}), href='https://github.com/DavidCarricondo/SW_chat-Sentiment-recommender'),),
+                dbc.Col([
+                    dbc.Button('Technologies', id='popover-target3', style={'color':'primary', 'height':'2rem', 'vertical-align':'top'}),
+                    dbc.Popover([
+                        dbc.PopoverBody(dcc.Markdown(
+                            '''
+                            + Flask 
+                            + Beautiful soup 
+                            + nltk
+                            + Docker
+                            + Mongo Atlas
+                            + Heroku
+                            '''))
+                    ],id='popover3', is_open=False, target='popover-target3')
+                ])
+            ])
         ]
     ),
 ]
 
 card_content_4 = [
-    dbc.CardImg(src=app.get_asset_url('gr_database_image.png'), top=True),
+    dbc.CardImg(src=app.get_asset_url('gr_database_image.png'), top=True, style={'height':'14rem'}),
     dbc.CardBody(
         [
             html.H5(dcc.Markdown("**Goodreads reviews custom database**"), className="card-title"),
@@ -63,14 +103,28 @@ card_content_4 = [
                 "I used Selenium to automate the scrapping of the latest 60 reviews posted in the website of more than 1000 titles. The clean version contains a total of 22512 reviews. The main usage is sentiment prediction.",
                 className="card-text",
             ),
-            html.A(html.Button("Let's take a look!"), href='https://github.com/DavidCarricondo/Custom-database-goodreads-reviews'),
+            dbc.Row([
+                dbc.Col(html.A(html.Button("Take a look!", style={'color':'dark', 'hight':'1.5rem'}), href='https://github.com/DavidCarricondo/Custom-database-goodreads-reviews'),),
+                dbc.Col([
+                    dbc.Button('Technologies', id='popover-target4', style={'color':'primary', 'height':'2rem', 'vertical-align':'top'}),
+                    dbc.Popover([
+                        dbc.PopoverBody(dcc.Markdown(
+                            '''
+                            + Selenium 
+                            + pandas 
+                            + seaborn
+                            + web scraping
+                            '''))
+                    ],id='popover4', is_open=False, target='popover-target4')
+                ])
+            ])
         ]
     ),
 ]
 
 
 card_content_5 = [
-    dbc.CardImg(src=app.get_asset_url('pipeline_image.png'), top=True, style={'height':'13rem'}),
+    dbc.CardImg(src=app.get_asset_url('pipeline_image.png'), top=True, style={'height':'14rem'}),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**Pipeline-project: Dancing to your band**"), className="card-title"),
@@ -78,13 +132,29 @@ card_content_5 = [
                 "Data pipelines that uses a kaggle data set enriched with data from two different APIS (with and without APIKEY) and from wikipedia scrapping that generate a report on a given music band.",
                 className="card-text",
             ),
-            html.A(html.Button("Let's take a look!"), href='https://github.com/DavidCarricondo/data-analysis-pipeline'),
+            dbc.Row([
+                dbc.Col(html.A(html.Button("Take a look!", style={'color':'dark', 'hight':'1.5rem'}), href='https://github.com/DavidCarricondo/data-analysis-pipeline'),),
+                dbc.Col([
+                    dbc.Button('Technologies', id='popover-target5', style={'color':'primary', 'height':'2rem', 'vertical-align':'top'}),
+                    dbc.Popover([
+                        dbc.PopoverBody(dcc.Markdown(
+                            '''
+                            + API request 
+                            + Beautiful soup 
+                            + argparse
+                            + fpdf for pdf generation
+                            + matplotlib
+                            + data pipeline
+                            '''))
+                    ],id='popover5', is_open=False, target='popover-target5')
+                ])
+            ])
         ]
     ),
 ]
 
 card_content_6 = [
-    dbc.CardImg(src=app.get_asset_url('diamonds_image.png'), top=True, style={'height':'13rem'}),
+    dbc.CardImg(src=app.get_asset_url('diamonds_image.png'), top=True, style={'height':'14rem'}),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**Diamond prices prediction with ML**"), className="card-title"),
@@ -93,13 +163,30 @@ card_content_6 = [
                 className="card-text",
             ),
             html.Hr(),
-            html.A(html.Button("Let's take a look!"), href='https://github.com/DavidCarricondo/Diamond-prices-ML-Kaggle-competition'),
+            dbc.Row([
+                dbc.Col(html.A(html.Button("Take a look!", style={'color':'dark', 'hight':'1.5rem'}), href='https://github.com/DavidCarricondo/Diamond-prices-ML-Kaggle-competition'),),
+                dbc.Col([
+                    dbc.Button('Technologies', id='popover-target6', style={'color':'primary', 'height':'2rem', 'vertical-align':'top'}),
+                    dbc.Popover([
+                        dbc.PopoverBody(dcc.Markdown(
+                            '''
+                            + Scikit learn
+                            + Pandas 
+                            + Matplotlib
+                            + Seaborn
+                            + Machine learning
+                            + GridSearshCV
+                            + H2O
+                            '''))
+                    ],id='popover6', is_open=False, target='popover-target6')
+                ])
+            ])
         ]
     ),
 ]
 
 card_content_7 = [
-    dbc.CardImg(src=app.get_asset_url('mongo_image.png'), top=True, style={'height':'13rem'}),
+    dbc.CardImg(src=app.get_asset_url('mongo_image.png'), top=True, style={'height':'14rem'}),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**Choosing best location for company**"), className="card-title"),
@@ -108,13 +195,27 @@ card_content_7 = [
                 className="card-text",
             ),
             html.Hr(),
-            html.A(html.Button("Let's take a look!"), href='https://github.com/DavidCarricondo/mongo-project'),
+            dbc.Row([
+                dbc.Col(html.A(html.Button("Take a look!", style={'color':'dark', 'hight':'1.5rem'}), href='https://github.com/DavidCarricondo/mongo-project'),),
+                dbc.Col([
+                    dbc.Button('Technologies', id='popover-target7', style={'color':'primary', 'height':'2rem', 'vertical-align':'top'}),
+                    dbc.Popover([
+                        dbc.PopoverBody(dcc.Markdown(
+                            '''
+                            + MongoDb 
+                            + pymongo 
+                            + API request
+                            + folium
+                            '''))
+                    ],id='popover7', is_open=False, target='popover-target7')
+                ])
+            ])
         ]
     ),
 ]
 
 card_content_8 = [
-    dbc.CardImg(src=app.get_asset_url('profile_image.png'), top=True, style={'height':'13rem'}),
+    dbc.CardImg(src=app.get_asset_url('profile_image.png'), top=True, style={'height':'14rem'}),
     dbc.CardBody(
         [
             html.H4(dcc.Markdown("**My profile dashboard**"), className="card-title"),
@@ -126,7 +227,22 @@ card_content_8 = [
             html.Hr(),
             html.Hr(),
             html.Hr(),
-            html.A(html.Button("Let's take a look!"), href='https://github.com/DavidCarricondo/dash-profile'),
+            dbc.Row([
+                dbc.Col(html.A(html.Button("Take a look!", style={'color':'dark', 'hight':'1.5rem'}), href='https://github.com/DavidCarricondo/dash-profile'),),
+                dbc.Col([
+                    dbc.Button('Technologies', id='popover-target8', style={'color':'primary', 'height':'2rem', 'vertical-align':'top'}),
+                    dbc.Popover([
+                        dbc.PopoverBody(dcc.Markdown(
+                            '''
+                            + Dash 
+                            + Dashboards 
+                            + HTML
+                            + Heroku
+                            + App deployment
+                            '''))
+                    ],id='popover8', is_open=False, target='popover-target8')
+                ])
+            ])
         ]
     ),
 ]
@@ -144,5 +260,10 @@ navbar = dbc.NavbarSimple(
 )
 
 text_card = html.Div([html.H4('Take a look at my data science projects', className='card-header', style={'color': 'primary', 'text-align': 'center'}), 
-    html.Div('Thanks for visiting my profile! These are some quick descriptions of the most relevant data project I have been working on. Click on the button in each card to be redirected to the github page \
-        of each of the projects. If you want to know more about me, click on the links in the footer. Enjoy your stay!', className='card-text')], className="card border-success mb-3")
+    html.Div(dcc.Markdown('''
+    Thanks for visiting my profile! These are the most relevant data project I have been working on. Click on the **Take a look!**\
+         button in each card to be redirected to the *github page* of the project. Click on **Technologies** to pop up the main tools used. \
+             If you want to **know more about me**, click on the links in the footer. 
+             
+                            Enjoy your stay!
+             '''), className='card-text')], className="card border-success mb-3")

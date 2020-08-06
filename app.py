@@ -10,20 +10,20 @@ from src.app_dash import app, external_stylesheets, server
 card = [
     dbc.Row([
         dbc.Col(),
-        dbc.Col(text_card, lg=3, md=4, xs=12, width=6),
+        dbc.Col(text_card, lg=3, md=4, xs=12),
         dbc.Col()]),
     dbc.Row([
-        dbc.Col(dbc.Card(card_content_1, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_2, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_3, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_4, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_1, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_2, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_3, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_4, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
     ]),
     html.Hr(),
     dbc.Row([
-        dbc.Col(dbc.Card(card_content_5, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_6, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_7, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_8, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_5, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_6, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_7, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_8, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
     ])
     ]
 
@@ -39,15 +39,19 @@ app.layout = html.Div(children=
 app.title = "David Carricondo's data projects"
 
 #Callbacks
-@app.callback(
-    Output("popover1", "is_open"),
-    [Input("popover-target1", "n_clicks")],
-    [State("popover1", "is_open")],
-)
-def toggle_popover(n, is_open):
-    if n:
-        return not is_open
-    return is_open
+
+for i in range(1,9):
+
+    @app.callback(
+        Output("popover"+str(i), "is_open"),
+        [Input("popover-target"+str(i), "n_clicks")],
+        [State("popover"+str(i), "is_open")],
+    )
+    def toggle_popover(n, is_open):
+        if n:
+            return not is_open
+        return is_open
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
