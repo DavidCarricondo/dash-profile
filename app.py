@@ -38,6 +38,16 @@ app.layout = html.Div(children=
 
 app.title = "David Carricondo's data projects"
 
+#Callbacks
+@app.callback(
+    Output("popover1", "is_open"),
+    [Input("popover-target1", "n_clicks")],
+    [State("popover1", "is_open")],
+)
+def toggle_popover(n, is_open):
+    if n:
+        return not is_open
+    return is_open
 
 if __name__ == '__main__':
     app.run_server(debug=True)
