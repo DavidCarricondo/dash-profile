@@ -2,6 +2,7 @@ import dash
 import dash_bootstrap_components as dbc
 import dash_html_components as html
 from src.layout import *
+from src.project_dictionary import project_dictionary
 from dash.dependencies import Input, Output, State
 from src.app_dash import app, external_stylesheets, server
 
@@ -12,17 +13,17 @@ card = [
         dbc.Col(text_card, lg=4, md=5, xs=12),
     ],justify='center'),
     dbc.Row([
-        dbc.Col(dbc.Card(card_content_1, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_2, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_3, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_4, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(1, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(2, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(3, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(4, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
     ]),
     html.Hr(),
     dbc.Row([
-        dbc.Col(dbc.Card(card_content_5, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_6, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_7, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(card_content_8, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(5, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(6, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(7, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(8, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
     ])
     ]
 
