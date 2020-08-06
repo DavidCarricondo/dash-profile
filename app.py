@@ -9,9 +9,8 @@ from src.app_dash import app, external_stylesheets, server
 # check: https://medium.com/swlh/dashboards-in-python-for-beginners-using-dash-responsive-mobile-dashboards-with-bootstrap-css-2a0d05a53cf6
 card = [
     dbc.Row([
-        dbc.Col(),
-        dbc.Col(text_card, lg=3, md=4, xs=12),
-        dbc.Col()]),
+        dbc.Col(text_card, lg=4, md=5, xs=12),
+    ],justify='center'),
     dbc.Row([
         dbc.Col(dbc.Card(card_content_1, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
         dbc.Col(dbc.Card(card_content_2, color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
@@ -32,7 +31,7 @@ app.layout = html.Div(children=
                     html.Div(html.H1(dcc.Markdown("**Welcome to David Carricondo's profile**"), style={"text-align":"center", "background-color":'#000000'})),
                     html.Div(card),
                     html.Hr(),
-                    html.Div(navbar)
+                    dbc.Row(dbc.Col(html.Div(navbar), lg=12, md=12, xs=12))
                 ]
             )
 

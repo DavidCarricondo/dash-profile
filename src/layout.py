@@ -256,7 +256,7 @@ navbar = dbc.NavbarSimple(
     brand="You can know more about me here: ",
     brand_href="#",
     color="dark",
-    dark=True,
+    dark=True
 )
 
 text_card = html.Div([html.H4('Take a look at my data science projects', className='card-header', style={'color': 'primary', 'text-align': 'center'}), 
@@ -265,5 +265,5 @@ text_card = html.Div([html.H4('Take a look at my data science projects', classNa
          button in each card to be redirected to the *github page* of the project. Click on **Technologies** to pop up the main tools used. \
              If you want to **know more about me**, click on the links in the footer. 
              
-                            Enjoy your stay!
+                                    Enjoy your stay!
              '''), className='card-text')], className="card border-success mb-3")
