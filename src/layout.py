@@ -254,7 +254,7 @@ navbar = dbc.NavbarSimple(
             
     ],
     brand="You can know more about me here: ",
-    brand_href="#",
+    brand_href="",
     color="dark",
     dark=True
 )
