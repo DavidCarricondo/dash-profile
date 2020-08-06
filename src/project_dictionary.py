@@ -69,7 +69,7 @@ project_dictionary={'1':{
                         },
                     '6':{
                         'title': "**Diamond prices prediction with ML**",
-                        'image':'drawme.png',
+                        'image':'diamonds_image.png',
                         'desc':"Data exploration, cleaning and modelling of a diamonds dataset. I use SciKit-learn and H2O as machine learning frameworks",
                         'link':'https://github.com/DavidCarricondo/Diamond-prices-ML-Kaggle-competition',
                         'technologies': '''

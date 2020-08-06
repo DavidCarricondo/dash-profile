@@ -14,16 +14,16 @@ card = [
     ],justify='center'),
     dbc.Row([
         dbc.Col(dbc.Card(generate_card(1, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(generate_card(2, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(2, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
         dbc.Col(dbc.Card(generate_card(3, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(generate_card(4, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(4, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
     ]),
     html.Hr(),
     dbc.Row([
         dbc.Col(dbc.Card(generate_card(5, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(generate_card(6, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(generate_card(7, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
-        dbc.Col(dbc.Card(generate_card(8, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(6, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(7, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(generate_card(8, project_dictionary, spaces=4), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, xs=12),
     ])
     ]
 
