@@ -5,29 +5,25 @@ from src.layout import *
 from dash.dependencies import Input, Output, State
 from src.app_dash import app, external_stylesheets, server
 
-
-#footer = html.Footer([html.A(html.Img(src="linkedin_image.png", style={'height':'50%', 'width':'50%', 'text-align':'right'}), href='https://www.linkedin.com/in/david-carricondo-sanchez/'),
-#                    html.A(html.Img(src='github_image.png' ,style={'height':'50%', 'width':'50%', 'text-align':'right'}), href='https://github.com/DavidCarricondo')])
-
 ### Use lg, md, xs dbc.Col arguments to make it responsive to other screens like cellphones.
 # check: https://medium.com/swlh/dashboards-in-python-for-beginners-using-dash-responsive-mobile-dashboards-with-bootstrap-css-2a0d05a53cf6
 card = [
     dbc.Row([
         dbc.Col(),
-        dbc.Col(text_card,  style={"width": "28rem"}),
+        dbc.Col(text_card, lg=3, md=4, xs=12, width=6),
         dbc.Col()]),
     dbc.Row([
-        dbc.Col(dbc.Card(card_content_1, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_2, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_3, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_4, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_1, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_2, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_3, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_4, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
     ]),
     html.Hr(),
     dbc.Row([
-        dbc.Col(dbc.Card(card_content_5, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_6, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_7, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
-        dbc.Col(dbc.Card(card_content_8, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"})),
+        dbc.Col(dbc.Card(card_content_5, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_6, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_7, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
+        dbc.Col(dbc.Card(card_content_8, color="dark", inverse=True, style={"width": "24rem", "height" : "28rem"}), lg=3, md=4, xs=12),
     ])
     ]
 
