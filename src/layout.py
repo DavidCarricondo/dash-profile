@@ -159,7 +159,7 @@ card_content_6 = [
         [
             html.H4(dcc.Markdown("**Diamond prices prediction with ML**"), className="card-title"),
             html.P(
-                "Data exploration, cleaning and modelling of a diamonds dataset. I use sklearn and h20 as machine learning frameworks",
+                "Data exploration, cleaning and modelling of a diamonds dataset. I use SciKit-learn and H2O as machine learning frameworks",
                 className="card-text",
             ),
             html.Hr(),
