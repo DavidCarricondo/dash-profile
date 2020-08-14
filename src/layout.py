@@ -34,7 +34,7 @@ navbar = dbc.NavbarSimple(
     children=[
         dbc.NavLink(html.Img(src=app.get_asset_url('linkedin_image.png'), style={'height':'75%', 'width':'18%', 'text-align':'right'}), href='https://www.linkedin.com/in/david-carricondo-sanchez/', className='lead'),
         dbc.NavLink(html.Img(src=app.get_asset_url('github_image.png'),style={'height':'75%', 'width':'18%'}), href='https://github.com/DavidCarricondo', className='lead'),
-        dbc.NavLink(html.Img(src=app.get_asset_url('resume_image.png'),style={'height':'75%', 'width':'18%'}), href='https://drive.google.com/file/d/1ZSIfm2vEnTN-2B-MrrRhcuPtyazp4Q4N/view?usp=sharing', className='lead'),
+        dbc.NavLink(html.Img(src=app.get_asset_url('resume_image.png'),style={'height':'75%', 'width':'18%'}), href='https://drive.google.com/file/d/1sUYw4Xm1cSuaFKVdk-jpG7C1Uz8_SViO/view?usp=sharing', className='lead'),
             
     ],
     brand="A bit more about me: ",
