@@ -10,20 +10,20 @@ from src.app_dash import app, external_stylesheets, server
 # check: https://medium.com/swlh/dashboards-in-python-for-beginners-using-dash-responsive-mobile-dashboards-with-bootstrap-css-2a0d05a53cf6
 card = [
     dbc.Row([
-        dbc.Col(text_card, lg=4, md=5, sm=6, xs=12),
+        dbc.Col(text_card, lg=4, md=6, sm=8, xs=14),
     ],justify='center'),
     dbc.Row([
-        dbc.Col(dbc.Card(generate_card(1, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, sm=6, xs=12),
-        dbc.Col(dbc.Card(generate_card(2, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4,sm=6, xs=12),
-        dbc.Col(dbc.Card(generate_card(3, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, sm=6, xs=12),
-        dbc.Col(dbc.Card(generate_card(4, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, sm=6, xs=12),
+        dbc.Col(dbc.Card(generate_card(1, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=4, md=6, sm=8, xs=14),
+        dbc.Col(dbc.Card(generate_card(2, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=4, md=6, sm=8, xs=14),
+        dbc.Col(dbc.Card(generate_card(3, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=4, md=6, sm=8, xs=14),
+        dbc.Col(dbc.Card(generate_card(4, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=4, md=6, sm=8, xs=14),
     ]),
     html.Hr(),
     dbc.Row([
-        dbc.Col(dbc.Card(generate_card(5, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, sm=6, xs=12),
-        dbc.Col(dbc.Card(generate_card(6, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, sm=6, xs=12),
-        dbc.Col(dbc.Card(generate_card(7, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, sm=6, xs=12),
-        dbc.Col(dbc.Card(generate_card(8, project_dictionary, spaces=4), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=3, md=4, sm=6, xs=12),
+        dbc.Col(dbc.Card(generate_card(5, project_dictionary), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=4, md=6, sm=8, xs=14),
+        dbc.Col(dbc.Card(generate_card(6, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=4, md=6, sm=8, xs=14),
+        dbc.Col(dbc.Card(generate_card(7, project_dictionary, spaces=1), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=4, md=6, sm=8, xs=14),
+        dbc.Col(dbc.Card(generate_card(8, project_dictionary, spaces=4), color="dark", inverse=True, style={"width": "24rem", "height" : "29rem"}), lg=4, md=6, sm=8, xs=14),
     ])
     ]
 
@@ -32,7 +32,7 @@ app.layout = html.Div(children=
                     html.Div(html.H1(dcc.Markdown("**Welcome to David Carricondo's profile**"), style={"text-align":"center", "background-color":'#000000'})),
                     html.Div(card),
                     html.Hr(),
-                    dbc.Row(dbc.Col(html.Div(navbar), lg=12, md=12, xs=12))
+                    dbc.Row(dbc.Col(html.Div(navbar), lg=4, md=6, sm=8, xs=14))
                 ]
             )
 
